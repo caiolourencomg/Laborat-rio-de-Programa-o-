@@ -13,12 +13,25 @@ print(somas)
 
 ## Exercicio 2: Função de Busca de Elementos
 # """""""
-# Ojetivo:
+# Ojetivo:| 
 # Implementar uma função que busque um elemento em uma lista.
 # """""""
 
-#def busca_elementos(b):
+def busca_elementos(elemento, lista):
+    # retornar true caso elemento esteja na lista
+    # retornar false caso elemento não esteja na lista
+    for numero in lista:
+        if elemento == numero:
+            return True
+    # percorremos toda a lista e não encontramos o elemento
+    return False
 
+listao = [3,8,5,4]
+numeroaserencotrado = int(input("Digite elemento: "))
+if busca_elementos(numeroaserencotrado, listao) == True:
+    print(f"{numeroaserencotrado} está na Lista!")
+else:
+    print(f"{numeroaserencotrado} não está na Lista!")
 
 
 ## Exercicio 3: Função de Contagem de Vogais
@@ -28,7 +41,7 @@ print(somas)
 # """""""
 
 def contagem_vogais(nome):
-    vogais = "a" , "e" , "i" , "o", "u"
+    vogais = "a" , "e" , "i" , "o", "u", "A", "E", "I", "O", "U" 
     soma = 0
     for letras in vogais:
         soma +=1
